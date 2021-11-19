@@ -11,12 +11,21 @@
         <Label Text="{Binding AccelYS}"></Label>
         <Label>Acceleration, Z: </Label>
         <Label Text="{Binding AccelZS}"></Label>
+
         <Label>Gyro - AngularVelocity, X: </Label>
         <Label Text="{Binding GyroXS}"></Label>
         <Label>Gyro - AngularVelocity, Y: </Label>
         <Label Text="{Binding GyroYS}"></Label>
         <Label>Gyro - AngularVelocity, Z: </Label>
         <Label Text="{Binding GyroZS}"></Label>
+
+        <Label>Magnetometer - X: </Label>
+        <Label Text="{Binding MagnetXS}"></Label>
+        <Label>Magnetometer - Y: </Label>
+        <Label Text="{Binding MagnetYS}"></Label>
+        <Label>Magnetometer - Z: </Label>
+        <Label Text="{Binding MagnetZS}"></Label>
+
         <Label>Latitude: </Label>
         <Label Text="{Binding LatitudeS}"></Label>
         <Label>Longitude: </Label>
@@ -31,8 +40,11 @@
         <Label Text="{Binding CourseS}"></Label>
         <Label>Timestamp: </Label>
         <Label Text="{Binding TimeStampS}"></Label>
-        <Label>Heading to Magnetic North: </Label>
+        <Label>GPS travel heading: </Label>
         <Label Text="{Binding CourseS}"></Label>
+
+        <Label>Heading to Magnetic North (Compass): </Label>
+        <Label Text="{Binding HeadingMagneticNorthS}"></Label>
     </StackLayout>
 
 </ContentPage>

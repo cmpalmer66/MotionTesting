@@ -42,6 +42,9 @@ namespace MotionTesting
 
             Compass.ReadingChanged += CompassOnReadingChanged;
             Compass.Start(SensorSpeed.Default);
+
+            Magnetometer.ReadingChanged += MagnetometerOnReadingChanged;
+            Magnetometer.Start(SensorSpeed.Default);
             
             InitializeComponent();
             BindingContext = this;
@@ -59,12 +62,58 @@ namespace MotionTesting
             // GetCurrentLocation();
         }
 
+        private double _magnetX;
+        public string MagnetXS => $"{MagnetX:F2}";
+
+        public double MagnetX
+        {
+            get => _magnetX;
+            set
+            {
+                _magnetX = value;
+                OnPropertyChanged("MagnetXS");
+            }
+        }
+
+        private double _magnetY;
+        public string MagnetYS => $"{MagnetY:F2}";
+
+        public double MagnetY
+        {
+            get => _magnetY;
+            set
+            {
+                _magnetY = value;
+                OnPropertyChanged("MagnetYS");
+            }
+        }
+        private double _magnetZ;
+        public string MagnetZS => $"{MagnetZ:F2}";
+
+        public double MagnetZ
+        {
+            get => _magnetZ;
+            set
+            {
+                _magnetZ = value;
+                OnPropertyChanged("MagnetZS");
+            }
+        }
+
+        private void MagnetometerOnReadingChanged(object sender, MagnetometerChangedEventArgs e)
+        {
+            var reading = e.Reading.MagneticField;
+            MagnetX = reading.X;
+            MagnetY = reading.Y;
+            MagnetZ = reading.Z;
+        }
+
         private void CurrentOnPositionChanged(object sender, PositionEventArgs e)
         {
             Latitude = e.Position.Latitude;
             Longitude = e.Position.Longitude;
             Speed = e.Position.Speed;
-            HeadingMagneticNorth = e.Position.Heading;
+            Course = e.Position.Heading;
             Accuracy = e.Position.Accuracy;
             Altitude = e.Position.Altitude;
             TimeStamp = e.Position.Timestamp;
