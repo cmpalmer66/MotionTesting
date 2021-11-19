@@ -4,47 +4,73 @@
              xmlns:motionTesting="clr-namespace:MotionTesting;assembly=MotionTesting"
              x:Class="MotionTesting.MainPage" x:DataType="motionTesting:MainPage">
 
-    <StackLayout>
-        <Label>Acceleration, X: </Label>
-        <Label Text="{Binding AccelXS}"></Label>
-        <Label>Acceleration, Y: </Label>
-        <Label Text="{Binding AccelYS}"></Label>
-        <Label>Acceleration, Z: </Label>
-        <Label Text="{Binding AccelZS}"></Label>
+    <Grid Margin="10,5,10,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+    
+        <Label Grid.Row="0" Grid.Column="0">Acceleration, X: </Label>
+        <Label Grid.Row="0" Grid.Column="1" Text="{Binding AccelXS}"></Label>
+        <Label Grid.Row="1" Grid.Column="0">Acceleration, Y: </Label>
+        <Label Grid.Row="1" Grid.Column="1" Text="{Binding AccelYS}"></Label>
+        <Label Grid.Row="2" Grid.Column="0">Acceleration, Z: </Label>
+        <Label Grid.Row="2" Grid.Column="1" Text="{Binding AccelZS}"></Label>
 
-        <Label>Gyro - AngularVelocity, X: </Label>
-        <Label Text="{Binding GyroXS}"></Label>
-        <Label>Gyro - AngularVelocity, Y: </Label>
-        <Label Text="{Binding GyroYS}"></Label>
-        <Label>Gyro - AngularVelocity, Z: </Label>
-        <Label Text="{Binding GyroZS}"></Label>
+        <Label Grid.Row="3" Grid.Column="0">Gyro - AngularVelocity, X: </Label>
+        <Label Grid.Row="3" Grid.Column="1" Text="{Binding GyroXS}"></Label>
+        <Label Grid.Row="4" Grid.Column="0">Gyro - AngularVelocity, Y: </Label>
+        <Label Grid.Row="4" Grid.Column="1" Text="{Binding GyroYS}"></Label>
+        <Label Grid.Row="5" Grid.Column="0">Gyro - AngularVelocity, Z: </Label>
+        <Label Grid.Row="5" Grid.Column="1" Text="{Binding GyroZS}"></Label>
 
-        <Label>Magnetometer - X: </Label>
-        <Label Text="{Binding MagnetXS}"></Label>
-        <Label>Magnetometer - Y: </Label>
-        <Label Text="{Binding MagnetYS}"></Label>
-        <Label>Magnetometer - Z: </Label>
-        <Label Text="{Binding MagnetZS}"></Label>
+        <Label Grid.Row="6" Grid.Column="0">Magnetometer - X: </Label>
+        <Label Grid.Row="6" Grid.Column="1" Text="{Binding MagnetXS}"></Label>
+        <Label Grid.Row="7" Grid.Column="0">Magnetometer - Y: </Label>
+        <Label Grid.Row="7" Grid.Column="1" Text="{Binding MagnetYS}"></Label>
+        <Label Grid.Row="8" Grid.Column="0">Magnetometer - Z: </Label>
+        <Label Grid.Row="8" Grid.Column="1" Text="{Binding MagnetZS}"></Label>
 
-        <Label>Latitude: </Label>
-        <Label Text="{Binding LatitudeS}"></Label>
-        <Label>Longitude: </Label>
-        <Label Text="{Binding LongitudeS}"></Label>
-        <Label>Speed: </Label>
-        <Label Text="{Binding SpeedS}"></Label>
-        <Label>Altitude: </Label>
-        <Label Text="{Binding AltitudeS}"></Label>
-        <Label>Accuracy: </Label>
-        <Label Text="{Binding AccuracyS}"></Label>
-        <Label>Course: </Label>
-        <Label Text="{Binding CourseS}"></Label>
-        <Label>Timestamp: </Label>
-        <Label Text="{Binding TimeStampS}"></Label>
-        <Label>GPS travel heading: </Label>
-        <Label Text="{Binding CourseS}"></Label>
+        <Label Grid.Row="9" Grid.Column="0">Latitude: </Label>
+        <Label Grid.Row="9" Grid.Column="1" Text="{Binding LatitudeS}"></Label>
+        <Label Grid.Row="10" Grid.Column="0">Longitude: </Label>
+        <Label Grid.Row="10" Grid.Column="1" Text="{Binding LongitudeS}"></Label>
+        <Label Grid.Row="11" Grid.Column="0">Speed: </Label>
+        <Label Grid.Row="11" Grid.Column="1" Text="{Binding SpeedS}"></Label>
+        <Label Grid.Row="12" Grid.Column="0">Altitude: </Label>
+        <Label Grid.Row="12" Grid.Column="1" Text="{Binding AltitudeS}"></Label>
+        <Label Grid.Row="13" Grid.Column="0">Accuracy: </Label>
+        <Label Grid.Row="13" Grid.Column="1" Text="{Binding AccuracyS}"></Label>
+        <Label Grid.Row="14" Grid.Column="0">Course: </Label>
+        <Label Grid.Row="14" Grid.Column="1" Text="{Binding CourseS}"></Label>
+        <Label Grid.Row="15" Grid.Column="0">Timestamp: </Label>
+        <Label Grid.Row="15" Grid.Column="1" Text="{Binding TimeStampS}"></Label>
+        <Label Grid.Row="16" Grid.Column="0">GPS travel heading: </Label>
+        <Label Grid.Row="16" Grid.Column="1" Text="{Binding CourseS}"></Label>
 
-        <Label>Heading to Magnetic North (Compass): </Label>
-        <Label Text="{Binding HeadingMagneticNorthS}"></Label>
-    </StackLayout>
+        <Label Grid.Row="17" Grid.Column="0">Heading to Magnetic North (Compass): </Label>
+        <Label Grid.Row="17" Grid.Column="1" Text="{Binding HeadingMagneticNorthS}"></Label>
+    </Grid>
 
 </ContentPage>
