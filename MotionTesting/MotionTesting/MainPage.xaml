@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:motionTesting="clr-namespace:MotionTesting;assembly=MotionTesting"
+             x:Class="MotionTesting.MainPage" x:DataType="motionTesting:MainPage">
+
+    <StackLayout>
+        <Label>Acceleration, X: </Label>
+        <Label Text="{Binding AccelXS}"></Label>
+        <Label>Acceleration, Y: </Label>
+        <Label Text="{Binding AccelYS}"></Label>
+        <Label>Acceleration, Z: </Label>
+        <Label Text="{Binding AccelZS}"></Label>
+        <Label>Gyro - AngularVelocity, X: </Label>
+        <Label Text="{Binding GyroXS}"></Label>
+        <Label>Gyro - AngularVelocity, Y: </Label>
+        <Label Text="{Binding GyroYS}"></Label>
+        <Label>Gyro - AngularVelocity, Z: </Label>
+        <Label Text="{Binding GyroZS}"></Label>
+        <Label>Latitude: </Label>
+        <Label Text="{Binding LatitudeS}"></Label>
+        <Label>Longitude: </Label>
+        <Label Text="{Binding LongitudeS}"></Label>
+        <Label>Speed: </Label>
+        <Label Text="{Binding SpeedS}"></Label>
+        <Label>Altitude: </Label>
+        <Label Text="{Binding AltitudeS}"></Label>
+        <Label>Accuracy: </Label>
+        <Label Text="{Binding AccuracyS}"></Label>
+        <Label>Course: </Label>
+        <Label Text="{Binding CourseS}"></Label>
+        <Label>Timestamp: </Label>
+        <Label Text="{Binding TimeStampS}"></Label>
+        <Label>Heading to Magnetic North: </Label>
+        <Label Text="{Binding CourseS}"></Label>
+    </StackLayout>
+
+</ContentPage>
